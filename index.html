@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Analog Clock</title>
+  <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+
+<body>
+
+	<div id='page-header'>
+		<h1>JavaScript Analog Clock</h1>
+	</div>
+
+  <div class="clock">
+    <div class="clock-face">
+      <div class="hand hour"></div>
+      <div class="hand min"></div>
+      <div class="hand second"></div>
+    </div>
+  </div>
+	
+	<script>
+	var secondHand=document.querySelector('.second');
+	var minuteHand=document.querySelector('.min');
+	var hourHand=document.querySelector('.hour');
+	
+	function setDate(){
+	
+	var now=new Date()
+	
+	var seconds = now.getSeconds();
+	var secDegrees = seconds*6+90;
+	secondHand.style.transform=`rotate(${secDegrees}deg)`;
+	
+	var minutes = now.getMinutes();
+	var minDegrees= (minutes*6+90)+(seconds/10);
+	minuteHand.style.transform=`rotate(${minDegrees}deg)`;
+	
+	var hours = now.getHours();
+	var hourDegrees= (hours*30+90)+ (minutes/2);
+	hourHand.style.transform=`rotate(${hourDegrees}deg)`;
+	
+	}
+	
+	setInterval(setDate,1000)
+	</script>
+	
+</body>
+</html>
+
