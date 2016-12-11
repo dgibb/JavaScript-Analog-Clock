@@ -26,25 +26,39 @@
 	var minuteHand=document.querySelector('.min');
 	var hourHand=document.querySelector('.hour');
 	
-	function setDate(){
+	var secDegrees;
+	var minDegrees;
+	var hourDegrees;
 	
-	var now=new Date()
+	function setTime(){
 	
-	var seconds = now.getSeconds();
-	var secDegrees = seconds*6+90;
+	var startTime = new Date()
+	
+	var seconds = startTime.getSeconds();
+	secDegrees = seconds*6+90;
 	secondHand.style.transform=`rotate(${secDegrees}deg)`;
 	
-	var minutes = now.getMinutes();
-	var minDegrees= (minutes*6+90)+(seconds/10);
+	var minutes = startTime.getMinutes();
+	minDegrees= (minutes*6+90)+(seconds/10);
 	minuteHand.style.transform=`rotate(${minDegrees}deg)`;
 	
-	var hours = now.getHours();
-	var hourDegrees= (hours*30+90)+ (minutes/2);
+	var hours = startTime.getHours();
+	hourDegrees= (hours*30+90)+ (minutes/2);
 	hourHand.style.transform=`rotate(${hourDegrees}deg)`;
 	
 	}
 	
-	setInterval(setDate,1000)
+	var updateTime = function(){
+	secDegrees+=6;
+	minDegrees+=0.1;
+	hourDegrees+=(.1/12);
+	secondHand.style.transform=`rotate(${secDegrees}deg)`;
+	minuteHand.style.transform=`rotate(${minDegrees}deg)`;
+	hourHand.style.transform=`rotate(${hourDegrees}deg)`;
+	}
+	
+	window.onLoad = setTime();
+	setInterval(updateTime,1000);
 	</script>
 	
 </body>

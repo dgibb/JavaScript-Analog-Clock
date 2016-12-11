@@ -50,6 +50,8 @@
       top:50%;
 	  transform: rotate(90deg);
 	  transform-origin:100%;
+	  transition:all 1s;
+	  transition-timing-function:linear; 
     }
 	
 	.second{
