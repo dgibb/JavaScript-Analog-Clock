@@ -350,7 +350,7 @@ html, body, #app, #react-root, #page-root, .content {
       transform: scale(1.05); }
 
 .bench {
-  background-image: url("/Client/img/bench.jpg");
+  background-image: url("Client/img/bench.jpg");
   background-size: cover;
   color: #F2F0EE; }
 
