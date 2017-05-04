@@ -1,66 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto|Roboto+Slab:700|Montserrat:700|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Client/css/css.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>JavaScript Analog Clock</title>
-  <link rel="stylesheet" type="text/css" href="CSS.css">
-</head>
+  <body>
+    <div id="app"></div>
+    <script src ="project demo.min.js"></script>
+  </body>
 
-<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<div id='page-header'>
-		<h1>JavaScript Analog Clock</h1>
-	</div>
-
-  <div class="clock">
-    <div class="clock-face">
-      <div class="hand hour"></div>
-      <div class="hand min"></div>
-      <div class="hand second"></div>
-    </div>
-  </div>
-	
-	<script>
-	var secondHand=document.querySelector('.second');
-	var minuteHand=document.querySelector('.min');
-	var hourHand=document.querySelector('.hour');
-	
-	var secDegrees;
-	var minDegrees;
-	var hourDegrees;
-	
-	function setTime(){
-	
-	var startTime = new Date()
-	
-	var seconds = startTime.getSeconds();
-	secDegrees = seconds*6+90;
-	secondHand.style.transform=`rotate(${secDegrees}deg)`;
-	
-	var minutes = startTime.getMinutes();
-	minDegrees= (minutes*6+90)+(seconds/10);
-	minuteHand.style.transform=`rotate(${minDegrees}deg)`;
-	
-	var hours = startTime.getHours();
-	hourDegrees= (hours*30+90)+ (minutes/2);
-	hourHand.style.transform=`rotate(${hourDegrees}deg)`;
-	
-	}
-	
-	var updateTime = function(){
-	secDegrees+=6;
-	minDegrees+=0.1;
-	hourDegrees+=(.1/12);
-	secondHand.style.transform=`rotate(${secDegrees}deg)`;
-	minuteHand.style.transform=`rotate(${minDegrees}deg)`;
-	hourHand.style.transform=`rotate(${hourDegrees}deg)`;
-	}
-	
-	window.onLoad = setTime();
-	setInterval(updateTime,1000);
-	</script>
-	
-</body>
 </html>
-
