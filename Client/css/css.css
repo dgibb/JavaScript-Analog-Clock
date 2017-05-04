@@ -355,34 +355,34 @@ html, body, #app, #react-root, #page-root, .content {
   color: #F2F0EE; }
 
 .street {
-  background-image: url("/Client/img/street.jpg");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/street.jpg");
   background-size: cover;
   color: #F2F0EE; }
 
 .city {
-  background-image: url("/Client/img/city.jpg");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/city.jpg");
   background-size: cover;
   color: #F2F0EE; }
 
 .bridge {
-  background-image: url("/Client/img/bridge.jpg");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/bridge.jpg");
   background-size: cover;
   color: #F2F0EE; }
 
 .wheat {
-  background-image: url("/Client/img/wheat.jpg");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/wheat.jpg");
   background-size: cover;
   color: #F2F0EE; }
 
 .clock-bg {
-  background-image: url("/Client/img/bench.jpg");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/bench.jpg");
   background-size: cover;
   transition-property: background;
   transition-timing-function: ease-in;
   transition: all 1s; }
 
 .clock-image {
-  background-image: url("/Client/img/clock.png");
+  background-image: url("/JavaScript-Analog-Clock/Client/img/clock.png");
   width: 700px;
   height: 700px;
   margin: 0px auto;
