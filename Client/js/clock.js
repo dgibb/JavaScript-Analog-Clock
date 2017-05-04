@@ -42,23 +42,23 @@ clock.hourHand.style.transform=`rotate(${clock.hourDegrees}deg)`;
 },
 
 bench:function(){
-  clock.bg.style.backgroundImage='url("/Client/img/bench.jpg")';
+  clock.bg.style.backgroundImage='url("/JavaScript-Analog-Clock/Client/img/bench.jpg")';
 },
 
 street:function(){
-  clock.bg.style.backgroundImage='url("/Client/img/street.jpg")';
+  clock.bg.style.backgroundImage='url("/JavaScript-Analog-Clock/Client/img/street.jpg")';
 },
 
 city:function(){
-  clock.bg.style.backgroundImage="url('/Client/img/city.jpg')";
+  clock.bg.style.backgroundImage="url('/JavaScript-Analog-Clock/Client/img/city.jpg')";
 },
 
 bridge:function(){
-  clock.bg.style.backgroundImage="url('/Client/img/bridge.jpg')";
+  clock.bg.style.backgroundImage="url('/JavaScript-Analog-Clock/Client/img/bridge.jpg')";
 },
 
 wheat:function(){
-  clock.bg.style.backgroundImage="url('/Client/img/wheat.jpg')";
+  clock.bg.style.backgroundImage="url('/JavaScript-Analog-Clock/Client/img/wheat.jpg')";
 },
 
 };
